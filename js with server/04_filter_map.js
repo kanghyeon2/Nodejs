@@ -24,8 +24,8 @@ let persons = [
 ];
 
 // 1) filter, 원본배열이 가지는 데이터타입과 같음, 배열의 크기가 줄어들 가능성이 있음
-let scores = persons.filter((val, idx)=>{
-    return val.point > 80; // boolean 타입 
+let scores = persons.filter((person)=>{
+    return person.point > 80; // boolean 타입 
 });
 console.log(scores);
 

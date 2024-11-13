@@ -15,8 +15,8 @@ console.log(email);
 function getFullName({firstName, lastName}){
     console.log( `${lastName}, ${firstName}`);
 }
-
 getFullName(person);
+
 
 // 2) ArrayDestructuring 순서대로만 가능
 let scores = [70,80,90];

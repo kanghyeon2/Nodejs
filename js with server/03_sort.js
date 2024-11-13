@@ -40,6 +40,8 @@ emps.sort((pre, next)=>{
 emps.sort((pre, next)=>{
     return  pre.eid - next.eid; //정순
 });
+
+
 console.log(emps);
 console.log(emps[0].eid);
 console.log(emps[0].name);
