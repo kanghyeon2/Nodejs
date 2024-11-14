@@ -16,7 +16,7 @@ server.get('/error', (req, res, next)=>{
 });
 
 
-// 미들웨어 등록
+// 미들웨어 등록 (제이슨 사용위해)
 server.use(express.json());
 
 // DB설정
@@ -104,6 +104,7 @@ Content-type
 => QueryString (질의문자열) : key=value&key=value&...
 => req.query 위 값들을 가져오는 속성
 
+//2번 3번 반드시 body필요
 2) application/json
 => JSON : () or []
 => req.body 속성
