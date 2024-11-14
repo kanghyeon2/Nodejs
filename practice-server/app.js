@@ -13,6 +13,7 @@ app.get('/', (req, res)=>{
     res.send('hello');
 })
 
+
 //전체조회
 app.get('/t_user', async(req, res)=>{
     let list = await mysql.query('userList');
