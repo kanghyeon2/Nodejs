@@ -9,6 +9,7 @@
     <p v-text="tagList" v-bind:class="textStyle" />
     <!-- v-bind 디렉티브 : 단방향 -->
     <hr />
+    
     <!-- v-model 디렉티브 : 양방향 -->
     <input type="text" v-model="valueModel" />
     <p>{{ valueModel }}, {{ typeof valueModel }}</p>
