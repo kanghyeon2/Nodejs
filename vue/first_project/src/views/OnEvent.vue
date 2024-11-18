@@ -7,14 +7,13 @@
         Div
         <p @click.stop="msg('p')">
           p
-          <a @click.prevent="msg('a')" href="http://www.naver.com">네이버</a>
+          <a @click.prevent="msg('a')" href="http://www.naver.com">네이버</a> <!-- prevent<< default값 없애기-->
         </p>
       </div>
     </form>
     <hr />
     <button type="button" v-on:click="increaseCounter">Add1</button>
-    <input v-model.number="num" />
-    <!--Number(), parseInt()-->
+    <input v-model.number="num" /> <!--Number(), parseInt() 텍스트를 숫자로-->
     <button type="button" @click="setCount(num, $event)">Add{{ num }}</button>
     <p>The Counter is : {{ counter }}</p>
   </div>

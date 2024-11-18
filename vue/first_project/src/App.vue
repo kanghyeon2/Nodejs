@@ -21,14 +21,14 @@
 
 <script>
 // 자식 컴포넌트로 등록 => 특정 페이지의 조각을 구성
-import DataBinding from "./views/DataBinding.vue";
+// import DataBinding from "./views/DataBinding.vue";
 
-export default {
-  components: {
-    DataBinding
-    //"data-binding": DataBinding
-  }
-};
+// export default {
+//   components: {
+//     DataBinding
+//     //"data-binding": DataBinding
+//   }
+// };
 </script>
 
 <style>
