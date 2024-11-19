@@ -10,8 +10,11 @@
                  :regdate="20231205"
                  :content="{first : 'Node.js', second : 'Vue.js'}"/> -->
     <PageContent v-bind="info" v-on:update-info="handler"/>
+    
     <hr>
+    
     <RefCom ref="child"/>
+    
     <hr>
     <label> 부모 데이터 : <input type="number" v-model="num"></label>
     <button type="button" @click="childHandler">자식 제어</button>
@@ -50,12 +53,12 @@ export default {
     console.log('PropsComponent.vue Mounted');
   },
   methods : {
-    handler(info){    // 자식 컴포넌트의 emit을 기반으로 넘긴 데이터가 매개변수로 넘어옴
+    handler(info){    // 자식 컴포넌트의 emit을 기반으로 넘긴 데이터가 매개변수로 넘어옴 page content
       console.log(info);
       alert('자식 컴포넌트 요청');
     },
     childHandler(){
-      //this.$refs.child.plusCount();
+      //this.$refs.child.plusCount(); refcomponenet
       let RefCom = this.$refs.child;
       RefCom.$refs.btn.click();
     }

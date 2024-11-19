@@ -20,7 +20,7 @@ export default {
   // },
   data() {
     return {
-      selected: "TextModal",
+      selected: "TextModal",  //default 값
     };
   },
   components: {
