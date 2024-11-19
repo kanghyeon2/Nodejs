@@ -1,14 +1,12 @@
 <template>
   <nav>
-    <a href="http://www.naver.com">네이버</a> | 
-    <router-link to="/">Home</router-link> |
+    <a href="http://www.naver.com">네이버</a> | <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/dataBinding">DataBinding</router-link> |
-    <router-link v-bind:to="{name:'listBind'}">ListBinding</router-link> |
-    <router-link :to="{path : '/IfBinding'}">IfBinding</router-link> |
-    <router-link to="/onEvent">OnEvent</router-link>
-    
-
+    <router-link v-bind:to="{ name: 'listBind' }">ListBinding</router-link> |
+    <router-link :to="{ path: '/IfBinding' }">IfBinding</router-link> |
+    <router-link to="/onEvent">OnEvent</router-link> |
+    <router-link to="/comWatch">ComputedWatch</router-link>
   </nav>
   <h1>모든 페이지에 출력</h1>
   <router-view />
@@ -53,4 +51,3 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
-

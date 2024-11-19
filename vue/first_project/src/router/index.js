@@ -5,14 +5,13 @@ import DataBinding from "@/views/DataBinding.vue"; //@ << 절대경로
 import ListBinding from "@/views/ListBinding.vue";
 import IfBinding from "@/views/IfBinding.vue";
 import OnEvent from "@/views/OnEvent.vue";
-
+import ComputedWatch from "@/views/ComputedWatch.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView
-    
+    component: HomeView,
   },
   {
     path: "/about",
@@ -20,33 +19,38 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ "../views/AboutView.vue") // 딜레이 시키는 역할
+    component: () => import(/* webpackChunkName: "about" */ "../views/AboutView.vue"), // 딜레이 시키는 역할
   },
   {
     path: "/dataBinding",
     name: "dataBind",
-    component: DataBinding
+    component: DataBinding,
   },
   {
     path: "/listBinding",
     name: "listBind",
-    component: ListBinding
+    component: ListBinding,
   },
   {
-  path: "/IfBinding",
-  name: "IfBind",
-  component: IfBinding
+    path: "/IfBinding",
+    name: "IfBind",
+    component: IfBinding,
   },
   {
-    path:"/onEvent",
+    path: "/onEvent",
     name: "onEvent",
-    component: OnEvent
-  }
+    component: OnEvent,
+  },
+  {
+    path: "/comWatch",
+    name: "comWatch",
+    component: ComputedWatch,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
 });
 // module.exports이랑 같은 뜻 by node require
 export default router;

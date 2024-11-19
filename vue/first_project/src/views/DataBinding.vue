@@ -9,7 +9,7 @@
     <p v-text="tagList" v-bind:class="textStyle" />
     <!-- v-bind 디렉티브 : 단방향 -->
     <hr />
-    
+
     <!-- v-model 디렉티브 : 양방향 -->
     <input type="text" v-model="valueModel" />
     <p>{{ valueModel }}, {{ typeof valueModel }}</p>
@@ -40,6 +40,7 @@
     <hr />
     <img v-bind:style="styleData" v-bind:src="imgUrl" />
     <div class="container" v-bind:class="{ active: isActive, 'text-red': hasError }">
+      <!--active랑 text-red 클래스명 -->
       Class Binding First
     </div>
     <div class="container" v-bind:class="myClass">Class Binding Second</div>
@@ -63,26 +64,26 @@ export default {
       city: [],
       hobby: "",
       styleData: {
-        backgroundColor: "skyblue",
-        width: "200px"
+        backgroundColor: "yellow",
+        width: "200px",
       },
       backSetting: "background-color : skyblue; width:200px;",
       imgUrl: "https://kr.vuejs.org/images/logo.png",
       isActive: false,
       // hasError: !this.isActive,
-      myClass: "active"
+      myClass: "active",
     };
   },
   computed: {
     // 이미 존재하는 데이터 기반으로 계산한 결과값(Read only)
     hasError: function () {
       return !this.isActive;
-    }
+    },
   }, // 데이터 바인딩에 사용하는 데이터들(R)
   methods: {}, // 컴포넌트 내보에서 사용하는 기능 및 함수
   watch: {}, // 감시자 : 변경사항을 감시
   components: {}, // 하위 컴포넌트 목로
-  props: [] // 부모로부터 넘겨받은 데이터들
+  props: [], // 부모로부터 넘겨받은 데이터들
 };
 </script>
 
