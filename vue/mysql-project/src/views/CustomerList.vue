@@ -1,4 +1,4 @@
-<!-- views/CustomerList.vue-->
+saZQzAQasaaaaaaaaa<!-- views/CustomerList.vue-->
 <template>
   <div class="container">
     <table class="table">
